@@ -283,7 +283,7 @@ function initFormHandling() {
         
         try {
             // Send email using EmailJS
-            await emailjs.send('service_kbz1hhk', 'template_8cs6x1r', formData);
+            await emailjs.send('service_kbz1hhk', 'template_y2zyplf', formData);
             
             // Show success state
             submitBtn.innerHTML = `
