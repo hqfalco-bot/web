@@ -302,6 +302,7 @@ function initFormHandling() {
             
         } catch (error) {
             console.error('EmailJS Error:', error);
+            console.error('Error details:', error.text || error.message || error);
             
             // Show error state
             submitBtn.innerHTML = `
@@ -313,7 +314,7 @@ function initFormHandling() {
             `;
             submitBtn.style.background = 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)';
             
-            showNotification('Failed to send message. Please try again or email us directly.', 'error');
+            showNotification('Failed to send: ' + (error.text || error.message || 'Unknown error'), 'error');
         }
         
         // Reset button after delay
